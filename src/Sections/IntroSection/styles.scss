@@ -1,0 +1,19 @@
+.btn-portfolio:hover {
+      & > .arrow-down {
+            & path {
+                  background-color: red;
+                  transition: all 0.3s ease-in-out;
+                  transform: scale(1.4);
+            }
+            fill: red;
+            transition: all 0.3s ease-in-out;
+            transform: scale(1.4);
+      }
+}
+
+.arrow-down {
+}
+
+img:hover path {
+      fill: red;
+}

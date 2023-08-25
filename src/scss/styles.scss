@@ -1,0 +1,19 @@
+/** @format */
+@import './variables.scss';
+
+@import '~bootstrap/scss/_mixins';
+@import '~bootstrap/scss/_functions';
+@import '~bootstrap/scss/_variables';
+
+@import './custom.scss';
+
+:root {
+      @each $spacer, $value in $spacers {
+            --spacer-#{$spacer}: #{$value};
+      }
+      @each $color, $value in $colors {
+            --color-#{$color}: #{$value};
+      }
+}
+
+@import '~bootstrap/scss/bootstrap';

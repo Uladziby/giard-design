@@ -1,0 +1,34 @@
+$custom-spacers: (
+      6: $spacer * 3.5,
+      7: $spacer * 4,
+      8: $spacer * 4.5,
+      9: $spacer * 5,
+      10: $spacer * 5.5,
+      11: $spacer * 6,
+);
+
+$spacers: map-merge($spacers, $custom-spacers);
+
+$custom-colors: (
+      'green': $green,
+      'beige': $beige,
+      'beige50': $beige50,
+      'black': $black,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+.btn-primary {
+      @include button-variant($btn-primary-bg, $btn-primary-border, $btn-primary-color);
+}
+
+$custom-font-sizes: (
+      7: 2rem,
+      8: 1.5rem,
+      9: 1rem,
+      10: 0.75rem,
+      11: 0.5rem,
+);
+
+$display-font-sizes: map-merge($display-font-sizes, $custom-font-sizes);
+$font-sizes: map-merge($font-sizes, $custom-font-sizes);
