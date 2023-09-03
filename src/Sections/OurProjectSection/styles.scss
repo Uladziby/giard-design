@@ -1,0 +1,33 @@
+.grid {
+      display: grid;
+      column-count: 3;
+}
+
+.grid-sizer {
+      width: 33.3%;
+}
+
+.gutter {
+      width: 1%;
+}
+
+.grid-item {
+      width: 32%;
+      height: auto;
+      min-height: 300px;
+      float: left;
+      margin-bottom: 1rem;
+
+      img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            mask-image: linear-gradient(black, transparent);
+            mask-mode: alpha;
+            -webkit-mask-mode: alpha;
+      }
+}
+
+.arrow-up {
+      transform: rotate(180deg);
+}

@@ -22,6 +22,6 @@ $btn-primary-color: $beige50;
 
 $btn-border-radius: 16px;
 
-.btn-green {
-      border-radius: $btn-border-radius;
+.btn {
+      border-radius: $btn-border-radius !important;
 }

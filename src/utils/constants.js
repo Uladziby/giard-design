@@ -36,6 +36,15 @@ export const sectionOffer = {
       ],
 };
 
+
+export const sectionOurProjects = {
+      title: 'Realizacje',
+      subTitle: 'Nasze projekty',
+      btnShow: 'Rozwiń',
+      btnHide: 'Zwiń'
+}
+
+
 export const navBar = [
       {
             title: 'Oferta',
@@ -53,3 +62,5 @@ export const navBar = [
 ];
 
 export const stylesSubTitle = ['fs-6', 'lh-base'];
+
+export const dFlexStyles = ['d-flex', 'justify-content-center', 'align-items-center'];
