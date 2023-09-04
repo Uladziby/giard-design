@@ -6,6 +6,6 @@ export class ASection extends BaseComponent {
             this.applyClasses();
       }
       applyClasses() {
-            this.element.classList.add('d-flex');
+            this.element.classList.add('d-flex', 'px-0');
       }
 }

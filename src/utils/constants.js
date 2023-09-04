@@ -1,3 +1,7 @@
+import eye_icon from 'assets/icons/eye_icon.svg';
+import pencil_icon from 'assets/icons/pencil_icon.svg';
+import stars_icon from 'assets/icons/stars_icon.svg';
+
 export const sectionIntro = {
       title: 'Nowoczesna aranżacja Twojego ogrodu',
       description:
@@ -13,37 +17,46 @@ export const sectionOffer = {
 
       offers: [
             {
-                  image: 'd',
+                  image: pencil_icon,
                   title: 'Projekty',
                   description:
                         'Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.',
-                  href: 'Dowiedz się więcej',
+                  titleLink: 'Dowiedz się więcej',
+                  href: '/projects',
             },
             {
-                  image: '2',
+                  image: eye_icon,
                   title: 'Wizualizacje',
                   description:
                         'Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.',
-                  href: 'Dowiedz się więcej',
+                  titleLink: 'Dowiedz się więcej',
+                  href: '/projects',
             },
             {
-                  image: '3',
+                  image: stars_icon,
                   title: 'Realizacje',
                   description:
                         'Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.',
-                  href: 'Zobacz nasze realizacje',
+                  titleLink: 'Zobacz nasze realizacje',
+                  href: '/projects',
             },
       ],
 };
-
 
 export const sectionOurProjects = {
       title: 'Realizacje',
       subTitle: 'Nasze projekty',
       btnShow: 'Rozwiń',
-      btnHide: 'Zwiń'
-}
+      btnHide: 'Zwiń',
+};
 
+export const sectionAboutUs = {
+      title: 'O firmie',
+      subtitle: 'Tworzymy z <i>pasją</i>',
+      description:
+            'Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci, których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe, dostosowane do współczesnego trybu życia.',
+      btnDetail: 'Poznaj nas bliżej',
+};
 
 export const navBar = [
       {

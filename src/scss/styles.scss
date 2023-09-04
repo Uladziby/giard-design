@@ -14,6 +14,9 @@
       @each $color, $value in $colors {
             --color-#{$color}: #{$value};
       }
+      @each $font-size, $value in $font-sizes {
+            --font-size-#{$font-size}: #{$value};
+      }
 }
 
 @import '~bootstrap/scss/bootstrap';
