@@ -1,5 +1,6 @@
 import { BaseComponent } from "components/BaseComponent";
 import "./styles.scss"
+import arrow from 'assets/icons/arrow_down.svg';
 
 export class OfferCardElement extends BaseComponent {
 
@@ -23,6 +24,6 @@ export class OfferCardElement extends BaseComponent {
         this.description = new BaseComponent(this.element, 'p', ['description'], this.description);
         this.link = new BaseComponent(this.element, 'a', ['mt-8',]);
         this.link.setAttribute('href', this.href)
-        this.link.setContent(`<span class="link-succes">${this.titleLink}</span><img class='px-2 arrow-right' src="assets/icons/arrow_down.svg" alt="arrow" />`)
+        this.link.setContent(`<span class="link-succes">${this.titleLink}</span><img class='px-2 arrow-right' src=${arrow} alt="arrow" />`)
     }
 }

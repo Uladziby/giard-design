@@ -51,6 +51,7 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 $custom-display-font-sizes: (
       2: 3rem,
+      6: 2.5rem,
       7: 2rem,
       8: 1.5rem,
       9: 1rem,
@@ -83,15 +84,3 @@ $container-max-widths: map-merge($container-max-widths, $custom-container-max-wi
 $display-font-sizes: map-merge($display-font-sizes, $custom-display-font-sizes);
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);
 $position-values: map-merge($position-values, $custom-position-values);
-
-//Generate utilites for Cursor
-/* $utilities: map-merge(
-      $utilities,
-      (
-            'cursor': (
-                  property: cursor,
-                  values: auto default pointer wait text move help not-allowed,
-            ),
-      )
-);
- */

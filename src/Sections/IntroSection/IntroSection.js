@@ -3,6 +3,7 @@ import { BaseComponent } from 'components/BaseComponent';
 import { ATypography } from 'components/ATypography';
 import PhotoIntro from 'assets/images/Photo.jpg';
 import { dFlexStyles, sectionIntro } from 'utils/constants';
+import arrow from 'assets/icons/arrow_down.svg';
 import './styles.scss';
 
 const { title, description, button_contact, button_portfolio } = sectionIntro;
@@ -48,10 +49,9 @@ export class IntroSection extends ASection {
                   'btn',
                   'btn-green',
                   ...dFlexStyles,
-                  'fs-9',
-                  'py-4',
-                  'px-4',
                   'lh-base',
+                  'px-3',
+                  'py-3'
             ]);
 
             this.buttonContact.setContent(button_contact);
@@ -60,14 +60,15 @@ export class IntroSection extends ASection {
                   'btn',
                   'btn-portfolio',
                   'btn-outline-green',
+                  'btn-sm',
                   ...dFlexStyles,
-                  'py-4',
-                  'px-4',
-                  'fs-9',
+                  'px-3',
+                  'py-3'
+
             ]);
 
             this.buttonPortfolio.setContent(
-                  `<div class='px-2 text-btn'> ${button_portfolio}</div><img class='px-2 arrow-down' src="assets/icons/arrow_down.svg" alt="arrow" />`,
+                  `<div class='px-2 text-btn btn-sm'> ${button_portfolio}</div><img class='px-2 arrow-down' src=${arrow} alt="arrow" />`,
             );
 
             const rigthPart = new BaseComponent(this.element, 'div', ['w-50']).setContent(

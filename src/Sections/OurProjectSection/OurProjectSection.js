@@ -27,9 +27,6 @@ export class OurProjectSection extends ASection {
         // @ts-ignore
         const msnry = new Masonry('.grid', { itemSelector: '.grid-item', columnWidth: '.grid-sizer', gutter: 26, initLayout: false });
 
-        msnry.on('layoutComplete', function (items) {
-            console.log(items.length);
-        });
         // trigger initial layout
         msnry.layout();
 

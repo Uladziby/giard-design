@@ -2,10 +2,13 @@ import { BaseComponent } from '../BaseComponent';
 
 export class ASection extends BaseComponent {
       constructor(parentNode = null, tagName = 'section', className = [], id = null) {
-            super(parentNode, tagName, className, id);
+            super(parentNode, tagName, className);
+            this.id = id;
             this.applyClasses();
       }
+
       applyClasses() {
-            this.element.classList.add('d-flex', 'px-0');
+            this.element.classList.add('container', 'd-flex', 'px-0');
+            this.element.setAttribute('id', this.id);
       }
 }

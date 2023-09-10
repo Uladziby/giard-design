@@ -58,6 +58,23 @@ export const sectionAboutUs = {
       btnDetail: 'Poznaj nas bliżej',
 };
 
+export const sectionContact = {
+      title: 'Zostańmy w kontakcie!',
+      subTitle: 'Znajdziesz nas na <i>Instagramie</i>.',
+      text: 'Śledź nasze najnowsze realizacje!',
+      instagram: 'https://www.instagram.com/giarddesign/',
+}
+
+export const sectionFooter = {
+      label: 'Daj znać, co możemy dla Ciebie zrobić!',
+      btnContact: 'Skontaktuj się z nami',
+      email: 'giarddesign@kontakt.pl',
+      phone: '+48 123 456 789',
+      socials: ['Kontakt', 'Instagram', 'Facebook', 'LinkedIn'],
+      additionalInfo: 'Prawa zastrzeżone © 2022',
+      madeBy: 'made by ',
+}
+
 export const navBar = [
       {
             title: 'Oferta',
