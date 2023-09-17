@@ -37,6 +37,7 @@ $custom-colors: (
       'beige': $beige,
       'black': $black,
       'beige50': $beige50,
+      'search': $search,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
@@ -73,6 +74,15 @@ $custom-position-values: (
       60: 60%,
       70: 70%,
       80: 80%,
+      81: 81%,
+      82: 82%,
+      83: 83%,
+      84: 84%,
+      85: 85%,
+      86: 86%,
+      87: 87%,
+      88: 88%,
+      89: 89%,
       90: 90%,
 );
 
@@ -84,3 +94,14 @@ $container-max-widths: map-merge($container-max-widths, $custom-container-max-wi
 $display-font-sizes: map-merge($display-font-sizes, $custom-display-font-sizes);
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);
 $position-values: map-merge($position-values, $custom-position-values);
+
+$utilities: (
+      'max-width': (
+            property: max-width,
+            class: mw,
+            values: (
+                  0: 0%,
+                  100: 100%,
+            ),
+      ),
+);

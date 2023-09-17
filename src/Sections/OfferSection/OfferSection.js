@@ -6,8 +6,8 @@ import { OfferCardElement } from './OfferCardElement/OfferCardElement';
 const { title, description, offers } = sectionOffer;
 
 export class OfferSection extends ASection {
-      constructor(parentNode = null, className = []) {
-            super(parentNode, 'section', className);
+      constructor(parentNode = null, className = [], id = null) {
+            super(parentNode, 'section', className, id);
 
             this.header = new BaseComponent(this.element, 'div', [
                   'section-title',

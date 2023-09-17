@@ -63,7 +63,7 @@ export const sectionContact = {
       subTitle: 'Znajdziesz nas na <i>Instagramie</i>.',
       text: 'Śledź nasze najnowsze realizacje!',
       instagram: 'https://www.instagram.com/giarddesign/',
-}
+};
 
 export const sectionFooter = {
       label: 'Daj znać, co możemy dla Ciebie zrobić!',
@@ -73,7 +73,7 @@ export const sectionFooter = {
       socials: ['Kontakt', 'Instagram', 'Facebook', 'LinkedIn'],
       additionalInfo: 'Prawa zastrzeżone © 2022',
       madeBy: 'made by ',
-}
+};
 
 export const navBar = [
       {
