@@ -23,13 +23,8 @@ export class IntroSection extends ASection {
                   this.element,
                   'div',
                   [
-                        'd-flex',
-                        'justify-content-center',
-                        'align-items-center',
-                        'flex-column',
+                        'intro__left-part',
                         'py-4',
-                        'px-8',
-                        'mw-50',
                   ],
                   '',
                   '',
@@ -43,7 +38,6 @@ export class IntroSection extends ASection {
 
             this.subTitleElement = new ATypography(this.leftPart, 'p', [
                   'sub-title',
-                  'fs-9',
                   'py-0',
                   'text-justify',
                   'display-9',
@@ -82,7 +76,7 @@ export class IntroSection extends ASection {
             this.rightPart = new BaseComponent(
                   this.element,
                   'div',
-                  ['carousel', 'slide', 'flex-grow-1'],
+                  ['intro__right-part', 'carousel', 'slide', 'px-0'],
                   `  
                   <div class="carousel-inner ">
                     <div class="carousel-item active c-item ">

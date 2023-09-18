@@ -14,22 +14,20 @@ class Application {
 
       init() {
             this.headerComponent = new HeaderComponent(this.parentNode, 'header', [
-                  'd-flex',
-                  'align-items-center',
-                  'justify-content-between',
-                  'mx-7',
+                  'mx-7', 'header',
             ]);
 
             this.sectionIntro = new IntroSection(
                   this.parentNode,
-                  ['position-relative', 'bg-primary', 'gap-5', 'w-100'],
+                  ['intro', 'position-relative', 'bg-primary', 'gap-5'],
                   'intro',
             );
 
             this.sectionOffer = new OfferSection(
                   this.parentNode,
-                  ['flex-wrap', 'bg-beige50', 'flex-column'],
-                  'offer',
+                  ['offers', 'bg-beige50', 'pb-21', 'justify-content-center',
+                  ],
+                  'offers',
             );
 
             this.sectionOurProjects = new OurProjectSection(

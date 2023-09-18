@@ -90,6 +90,18 @@ $custom-container-max-widths: (
       xxxl: 1440px,
 );
 
+$custom-grid-breakpoints: (
+      xxl: 1440px,
+      fhd: 1920px,
+);
+
+$custom-container-max-widths: (
+      xxl: 1400px,
+      fhd: 1920px,
+);
+
+$container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
+$grid-breakpoints: map-merge($grid-breakpoints, $custom-grid-breakpoints);
 $container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
 $display-font-sizes: map-merge($display-font-sizes, $custom-display-font-sizes);
 $font-sizes: map-merge($font-sizes, $custom-font-sizes);

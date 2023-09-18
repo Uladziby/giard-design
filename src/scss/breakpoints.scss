@@ -1,0 +1,68 @@
+.my-row {
+      @include make-row();
+      --bs-gutter-y: 1rem;
+
+      & > * {
+            @include make-col-ready();
+      }
+}
+
+.container {
+      @include make-container();
+      max-width: 1920px;
+}
+
+.header,
+.intro,
+.projects,
+.offers,
+.contact,
+.footer {
+      @extend .my-row;
+}
+
+@include media-breakpoint-up(md) {
+      .header {
+            &__logo {
+                  @include make-col(1);
+            }
+
+            &__navbar {
+                  @include make-col(1);
+            }
+
+            &__search {
+                  @include make-col(1);
+            }
+      }
+      .intro {
+            &__left-part {
+                  @include make-col(1);
+            }
+
+            &__right-part {
+                  @include make-col(1);
+            }
+      }
+
+      .offers {
+            &__header {
+                  @include make-col(12);
+                  padding-left: 5rem;
+            }
+            &__cards {
+                  @include make-col(12);
+            }
+      }
+      .projects {
+      }
+
+      .contact {
+      }
+
+      .footer {
+      }
+}
+
+@include media-breakpoint-up(lg) {
+}

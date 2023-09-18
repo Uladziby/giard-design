@@ -2,8 +2,9 @@ import { BaseComponent } from 'components/BaseComponent';
 import search from 'assets/icons/search.svg';
 
 export class SearchDropdown extends BaseComponent {
-      constructor(parentNode = null) {
+      constructor(parentNode = null, className = []) {
             super(parentNode, 'div', [
+                  ...className,
                   'd-inline-flex',
                   'z-index-1',
                   'rounded-pill',

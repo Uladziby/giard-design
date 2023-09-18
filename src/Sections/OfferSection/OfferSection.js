@@ -9,14 +9,19 @@ export class OfferSection extends ASection {
       constructor(parentNode = null, className = [], id = null) {
             super(parentNode, 'section', className, id);
 
-            this.header = new BaseComponent(this.element, 'div', [
+            this.header = new BaseComponent(this.element, 'div', ['offers__header',
                   'section-title',
-                  'd-flex',
-                  'flex-column',
-                  'flex-start',
                   'mt-13',
                   'pb-13',
-                  'px-26',
+                  'd-flex',
+                  'justify-content-center',
+                  'flex-column',
+                  'px-9'
+                  /*        
+                         ,
+                         'flex-start',
+                        '
+                         , */
             ]);
             this.subTitle = new BaseComponent(
                   this.header.element,
@@ -28,20 +33,22 @@ export class OfferSection extends ASection {
             this.description = new BaseComponent(
                   this.header.element,
                   'p',
-                  ['description', 'pt-5', 'w-75'],
+                  ['description', 'pt-5',],
                   description,
             );
 
-            this.cardContainer = new BaseComponent(this.element, 'div', [
-                  'container',
-                  'd-flex',
-                  'flex-wrap',
-                  'justify-content-between',
+            this.cardContainer = new BaseComponent(this.element, 'div', ['offers__cards',
                   'align-items-center',
-                  'px-12',
-                  'w-100',
                   'gap-5',
-                  'pb-21',
+                  'd-flex',
+                  'my-row',
+                  'justify-content-center',
+                  /*       
+                              'flex-wrap',
+                              'justify-content-between',
+                              'px-12',
+                              'w-100',
+                               */
             ]);
 
             offers.forEach(

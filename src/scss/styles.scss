@@ -5,7 +5,12 @@
 @import '~bootstrap/scss/_functions';
 @import '~bootstrap/scss/_variables';
 
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~bootstrap/scss/mixins/container';
+@import '~bootstrap/scss/mixins/grid';
+
 @import './custom.scss';
+@import './breakpoints.scss';
 
 :root {
       @each $spacer, $value in $spacers {

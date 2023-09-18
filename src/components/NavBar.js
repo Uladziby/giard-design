@@ -2,8 +2,9 @@ import { BaseComponent } from './BaseComponent';
 import './styles.scss';
 
 export class NavBar extends BaseComponent {
-      constructor(parentNode = null, navBarItems) {
-            super(parentNode, 'nav', ['navbar', 'navbar-expand-lg', 'navbar-light']);
+      constructor(parentNode = null, navBarItems, className = []) {
+            super(parentNode, 'nav', [...className, 'navbar', 'navbar-expand-lg', 'navbar-light',
+            ]);
             this.navBar = new BaseComponent(this.element, 'ul', [
                   'navbar-nav',
                   'me-auto',

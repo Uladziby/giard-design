@@ -5,16 +5,16 @@ import { navBar } from 'utils/constants';
 import { SearchDropdown } from 'components/SearchDropdown/SearchDropdown';
 import 'components/SearchDropdown/styles.scss';
 
+
 export class HeaderComponent extends BaseComponent {
     constructor(parentNode = null, tagName = 'header', className = [], id = null) {
         super(parentNode, tagName, className, id);
 
-        this.logoContainer = new BaseComponent(this.element, 'div', [
-            'logo-container',
-        ]).setContent(`<img src=${logo} alt="logo" />`);
+        this.logoContainer = new BaseComponent(this.element, 'div', ['header__logo']);
+        this.logoContainer.setContent(`<img src=${logo} alt="logo" />`);
 
-        this.navBar = new NavBar(this.element, navBar);
+        this.navBar = new NavBar(this.element, navBar, ['header__navbar']);
 
-        this.searchDropdown = new SearchDropdown(this.navBar.element);
+        this.searchDropdown = new SearchDropdown(this.element, ['header__search']);
     }
 }

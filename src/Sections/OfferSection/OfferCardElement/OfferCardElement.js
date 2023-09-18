@@ -1,6 +1,5 @@
 import { BaseComponent } from 'components/BaseComponent';
 import './styles.scss';
-import arrow from 'assets/icons/arrow_down.svg';
 
 export class OfferCardElement extends BaseComponent {
       constructor(parentNode, offers, className = []) {
