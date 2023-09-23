@@ -3,9 +3,9 @@ import { BaseComponent } from 'components/BaseComponent';
 import { ATypography } from 'components/ATypography';
 import { dFlexStyles, sectionIntro } from 'utils/constants';
 import arrow from 'assets/icons/arrow.svg';
-import slide_one from 'assets/images/slider_photo.jpg';
-import slide_second from 'assets/images/photoGallery/photo_4.jpg';
-import slide_third from 'assets/images/Photo.jpg';
+import slide_one from 'assets/images/slide_one.webp';
+import slide_second from 'assets/images/slide_second.webp';
+import slide_third from 'assets/images/slide_third.webp';
 
 import './styles.scss';
 
@@ -24,16 +24,20 @@ export class IntroSection extends ASection {
                   'div',
                   [
                         'intro__left-part',
-                        'py-4',
-                  ],
-                  '',
-                  '',
-                  [],
-                  'max-width: 656px',
+                        'd-flex',
+                        'align-items-center',
+                        'justify-content-center',
+                        'flex-column',
+                        'px-4',
+                        'ps-xxl-12',
+                        'pe-xxl-20',
+                        'mt-9',
+                        'mb-9'
+                  ]
             );
 
             this.titleElement = new ATypography(this.leftPart, 'h1', ['title', 'mb-5']).setText(
-                  title,
+                  title
             );
 
             this.subTitleElement = new ATypography(this.leftPart, 'p', [
@@ -44,11 +48,11 @@ export class IntroSection extends ASection {
             ]).setText(description);
 
             this.buttonBlock = new BaseComponent(this.leftPart.element, 'div', [
-                  'container',
                   'd-flex',
                   'mt-6',
                   'gap-4',
                   'px-0',
+                  'w-100',
             ]);
 
             this.buttonContact = new BaseComponent(
@@ -76,11 +80,11 @@ export class IntroSection extends ASection {
             this.rightPart = new BaseComponent(
                   this.element,
                   'div',
-                  ['intro__right-part', 'carousel', 'slide', 'px-0'],
+                  ['intro__right-part', 'carousel', 'slide', 'px-0', 'gy-0'],
                   `  
-                  <div class="carousel-inner ">
+                  <div class="carousel-inner  ">
                     <div class="carousel-item active c-item ">
-                      <img src=${slide_one} class=" object-fit-cover" alt="Slide 1">
+                      <img src=${slide_one} class="w-100 object-fit-cover" alt="Slide 1">
                     </div>
                     <div class="carousel-item c-item">
                       <img src=${slide_second} class="d-block w-100 object-fit-cover" alt="Slide 2">
@@ -95,16 +99,17 @@ export class IntroSection extends ASection {
             );
 
             this.containerSliderButtons = new BaseComponent(this.rightPart.element, 'div', [
+                  'intro__right-part_slider-buttons',
                   'position-absolute',
                   'd-flex',
-                  'w-20',
                   'justify-content-between',
+                  'w-20',
                   'bg-beige50',
-                  'py-5',
                   'px-4',
+                  'py-5',
                   'z-index-2',
                   'top-85',
-                  'start-80',
+                  'end-0',
             ]);
 
             this.leftSlideButton = new BaseComponent(

@@ -1,33 +1,42 @@
 .grid {
-      display: grid;
-      column-count: 3;
-}
-
-.grid-sizer {
-      width: 33.3%;
-}
-
-.gutter {
-      width: 1%;
+      &::-webkit-scrollbar {
+            width: 1px;
+      }
 }
 
 .grid-item {
-      width: 32%;
-      height: auto;
-      min-height: 300px;
       float: left;
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
 
       img {
             width: 100%;
-            height: 100%;
             object-fit: cover;
-            mask-image: linear-gradient(black, transparent);
-            mask-mode: alpha;
-            -webkit-mask-mode: alpha;
       }
+}
+
+.grid-item img {
+      display: block;
+      max-width: 100%;
+      filter: grayscale(0.3);
+}
+
+.grid-item img:hover {
+      filter: grayscale(0);
 }
 
 .arrow-up {
       transform: rotate(180deg);
+}
+
+#projects::after {
+      -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+      -webkit-mask-size: 100% 100%;
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 60%;
+      left: 0;
+      right: 0;
+      height: 360px;
+      background-color: white;
 }

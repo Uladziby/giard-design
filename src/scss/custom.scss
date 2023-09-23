@@ -91,13 +91,19 @@ $custom-container-max-widths: (
 );
 
 $custom-grid-breakpoints: (
+      md: 768px,
+      lg: 992px,
+      xl: 1200px,
       xxl: 1440px,
-      fhd: 1920px,
+      xxxl: 1640px,
 );
 
 $custom-container-max-widths: (
-      xxl: 1400px,
-      fhd: 1920px,
+      md: 768px,
+      lg: 992px,
+      xl: 1200px,
+      xxl: 1440px,
+      xxxl: 1640px,
 );
 
 $container-max-widths: map-merge($container-max-widths, $custom-container-max-widths);
@@ -114,6 +120,20 @@ $utilities: (
             values: (
                   0: 0%,
                   100: 100%,
+            ),
+      ),
+      'width': (
+            property: width,
+            class: w,
+            values: (
+                  25: 25%,
+                  40: 40%,
+                  50: 50%,
+                  60: 60%,
+                  75: 75%,
+                  95: 95%,
+                  100: 100%,
+                  auto: auto,
             ),
       ),
 );

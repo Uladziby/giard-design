@@ -51,4 +51,8 @@ export class BaseComponent {
       applyClasses(classes) {
             this.element.classList.add(...classes);
       }
+
+      appendChild(child) {
+            this.element.appendChild(child);
+      }
 }

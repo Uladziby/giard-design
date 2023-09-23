@@ -1,25 +1,57 @@
 import { BaseComponent } from './BaseComponent';
 import './styles.scss';
 
+const close = 'close';
+const open = 'open';
+
 export class NavBar extends BaseComponent {
       constructor(parentNode = null, navBarItems, className = []) {
-            super(parentNode, 'nav', [...className, 'navbar', 'navbar-expand-lg', 'navbar-light',
-            ]);
-            this.navBar = new BaseComponent(this.element, 'ul', [
+            super(parentNode, 'nav', className);
+
+            this.isMenuOpen = false;
+            this.isDropdownOpen = false;
+
+            this.navbarToggler = new BaseComponent(
+                  this.element,
+                  'button',
+                  ['navbar-toggler'],
+                  '<span class="navbar-toggler-icon"></span>',
+                  'navbarToggler',
+                  [
+                        { name: 'type', value: 'button' },
+                        { name: 'data-bs-toggle', value: 'collapse' },
+                        { name: 'data-bs-target', value: '#navbarContent' },
+                        { name: 'aria-controls', value: 'navbarContent' },
+                        { name: 'aria-expanded', value: 'false' },
+                        { name: 'aria-label', value: 'Toggle navigation' }
+                  ],
+            );
+
+            this.navBarContent = new BaseComponent(
+                  this.element,
+                  'div',
+                  ['collapse', 'navbar-collapse'],
+                  '',
+                  'navbarContent',
+            );
+
+            this.navBar = new BaseComponent(this.navBarContent.element, 'ul', [
                   'navbar-nav',
                   'me-auto',
                   'mb-2',
                   'mb-lg-0',
                   'd-flex',
-                  'gap-5',
+                  'justify-content-between',
+                  'w-100',
             ]);
 
             navBarItems.map(item => {
                   const { title, href, nestedElements } = item;
                   const navBarElement = new BaseComponent(this.navBar.element, 'li', [
-                        'navbar-item',
+                        'nav-item',
                         'text-decoration-none',
                         'fw-normal',
+                        'text-nowrap'
                   ]);
 
                   if (item.hasOwnProperty('nestedElements')) {
@@ -36,9 +68,6 @@ export class NavBar extends BaseComponent {
                               ],
                         );
 
-                        this.dropdown.element.addEventListener('click', () => {
-                              this.toggleDropdown();
-                        });
 
                         this.dropdownButton = new BaseComponent(
                               this.dropdown.element,
@@ -57,7 +86,6 @@ export class NavBar extends BaseComponent {
                         this.dropdownMenu = new BaseComponent(navBarElement.element, 'ul', [
                               'dropdown-menu',
                               'menu',
-                              'd-flex',
                               'flex-column',
                               'gap-2',
                         ]);
@@ -72,6 +100,12 @@ export class NavBar extends BaseComponent {
 
                               // @ts-ignore
                               nestedElement.element.href = `#${href}`;
+
+                              nestedElement.element.addEventListener('click', () => {
+                                    this.isDropdownOpen = false;
+                                    this.closeNestedMenu();
+
+                              });
                         });
                   } else {
                         const link = new BaseComponent(
@@ -84,10 +118,51 @@ export class NavBar extends BaseComponent {
                         link.element.href = `#${href}`;
                   }
             });
+
+
+
+            window.addEventListener('click', (event) => {
+                  if (!this.isDropdownOpen && (event.target === this.dropdownButton.element || event.target === this.chevron.element)) {
+
+                        this.openDropdown();
+                        this.openNestedMenu();
+                  }
+                  else if (event.target === this.navbarToggler.element) {
+                        event.stopPropagation();
+                        this.isMenuOpen ? this.closeDropdown() : this.openDropdown();
+                  }
+                  else {
+                        this.closeDropdown();
+                        this.closeNestedMenu();
+                  }
+
+            });
       }
-      toggleDropdown() {
-            this.chevron.element.classList.toggle('bi-x-lg');
-            this.chevron.element.classList.toggle('bi-chevron-down');
-            this.dropdownMenu.element.classList.toggle('open');
+
+      openDropdown() {
+            this.dropdownMenu.element.classList.add('open');
+            this.isMenuOpen = true;
+      }
+
+      closeDropdown() {
+            this.dropdownMenu.element.classList.remove('open');
+            this.isMenuOpen = false;
+      }
+
+      closeNestedMenu() {
+            this.chevron.element.classList.remove('bi-x-lg');
+            this.chevron.element.classList.add('bi-chevron-down');
+            this.dropdownMenu.element.classList.remove('open');
+            this.isDropdownOpen = false;
+      }
+
+      openNestedMenu() {
+            this.chevron.element.classList.add('bi-x-lg');
+            this.chevron.element.classList.remove('bi-chevron-down');
+            this.dropdownMenu.element.classList.add('open');
+            this.isDropdownOpen = true;
+
       }
 }
+
+

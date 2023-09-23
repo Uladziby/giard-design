@@ -8,7 +8,7 @@ export class ASection extends BaseComponent {
       }
 
       applyClasses() {
-            this.element.classList.add('container', 'row', 'd-flex', 'px-0', 'mx-0');
+            this.element.classList.add('px-0', 'mx-0');
             this.element.setAttribute('id', this.id);
       }
 }

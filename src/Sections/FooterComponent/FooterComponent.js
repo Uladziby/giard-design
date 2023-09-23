@@ -15,50 +15,56 @@ export class FooterComponent extends ASection {
 
       init() {
             this.header = new BaseComponent(this.element, 'div', [
-                  'd-flex',
-                  'justify-content-between',
-                  'border-bottom',
+                  'footer__header',
+                  'my-row',
                   'pb-9',
-                  'w-100',
+                  'border-bottom',
             ]);
+
             this.logo = new BaseComponent(
                   this.header.element,
                   'div',
-                  ['align-items-center'],
+                  ['align-items-center', 'footer__header-logo'],
                   `<img src=${logo} class=object-fit-cover" alt="logo" />`,
             );
+
             this.buttonBlock = new BaseComponent(this.header.element, 'div', [
+                  'footer__header-contact',
                   'd-flex',
                   'justify-content-between',
                   'align-items-center',
             ]);
+
             this.label = new BaseComponent(
                   this.buttonBlock.element,
                   'span',
                   ['align-text-center', 'me-4', 'text-beige50'],
                   label,
             );
+
             this.buttonContact = new BaseComponent(
                   this.buttonBlock.element,
                   'button',
-                  ['btn', 'btn-primary'],
-                  btnContact,
+                  ['btn', 'btn-secondary', 'bg-green'],
+                  btnContact
             );
 
             this.contactsBlock = new BaseComponent(this.element, 'div', [
                   'd-flex',
+                  'footer__contacts-block',
+                  'my-row',
                   'justify-content-between',
                   'align-items-center',
                   'pt-9',
-                  'w-100',
             ]);
 
             this.leftSide = new BaseComponent(this.contactsBlock.element, 'div', [
                   'd-flex',
+                  'footer__links',
                   'align-items-start',
-                  'w-50',
                   'gap-4',
             ]);
+
             socials.forEach(social => {
                   const element = new BaseComponent(
                         this.leftSide.element,
@@ -72,15 +78,26 @@ export class FooterComponent extends ASection {
             this.rightSide = new BaseComponent(
                   this.contactsBlock.element,
                   'div',
-                  ['d-flex', 'justify-content-between', 'gap-4', 'align-items-start'],
-                  `<span class="text-beige50">${phone}</span><span class="text-beige50">${email}</span>`,
+                  ['footer__phone', 'd-flex', 'justify-content-between', 'gap-4', 'align-items-start'],
+                  `<span class="text-beige50 w-60 text-nowrap">
+                        ${phone}
+                  </span>
+                  <span class="text-beige50 w-40">
+                        ${email}
+                  </span>`,
             );
 
-            this.footer = new BaseComponent(
+            this.bottom = new BaseComponent(
                   this.element,
                   'div',
-                  ['d-flex', 'justify-content-between', 'align-items-center', 'mt-16', 'w-100'],
-                  `<span class="text-beige50">${additionalInfo}</span><span class="text-beige50">${madeBy} <img src="${logoCompany}" alt="company"/></span>`,
+                  ['my-row', 'footer__bottom', 'd-flex', 'justify-content-between', 'mt-16', 'mx-0', 'w-100'],
+                  `<span class="col-md-5 text-beige50">
+                        ${additionalInfo}
+                  </span>
+                  <span class="col-md-6 text-beige50 ">
+                        <span>${madeBy}</span> 
+                        <img src="${logoCompany}" alt="company"/>
+                  </span>`,
             );
       }
 }

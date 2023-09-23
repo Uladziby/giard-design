@@ -17,19 +17,17 @@ export class OfferSection extends ASection {
                   'justify-content-center',
                   'flex-column',
                   'px-9'
-                  /*        
-                         ,
-                         'flex-start',
-                        '
-                         , */
             ]);
+
             this.subTitle = new BaseComponent(
                   this.header.element,
                   'h6',
                   ['sub-title', 'text-green'],
                   'Oferta',
             );
+
             this.title = new BaseComponent(this.header.element, 'h2', ['title'], title);
+
             this.description = new BaseComponent(
                   this.header.element,
                   'p',
@@ -43,12 +41,6 @@ export class OfferSection extends ASection {
                   'd-flex',
                   'my-row',
                   'justify-content-center',
-                  /*       
-                              'flex-wrap',
-                              'justify-content-between',
-                              'px-12',
-                              'w-100',
-                               */
             ]);
 
             offers.forEach(

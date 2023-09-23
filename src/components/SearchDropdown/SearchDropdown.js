@@ -5,13 +5,13 @@ export class SearchDropdown extends BaseComponent {
       constructor(parentNode = null, className = []) {
             super(parentNode, 'div', [
                   ...className,
+                  'searchBar',
                   'd-inline-flex',
                   'z-index-1',
                   'rounded-pill',
                   'btn',
                   'position-relative',
                   'text-align-center',
-                  'searchBar',
             ]);
             this.isDropdownOpen = false;
 

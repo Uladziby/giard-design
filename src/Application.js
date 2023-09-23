@@ -14,12 +14,12 @@ class Application {
 
       init() {
             this.headerComponent = new HeaderComponent(this.parentNode, 'header', [
-                  'mx-7', 'header',
+                  'header', 'my-4'
             ]);
 
             this.sectionIntro = new IntroSection(
                   this.parentNode,
-                  ['intro', 'position-relative', 'bg-primary', 'gap-5'],
+                  ['intro', 'position-relative', 'bg-primary'],
                   'intro',
             );
 
@@ -30,35 +30,40 @@ class Application {
                   'offers',
             );
 
+            this.sectionAbout = new AboutSection(
+                  this.parentNode,
+                  ['aboutus', 'bg-secondary', 'gap-9'],
+                  'aboutus',
+            );
+
             this.sectionOurProjects = new OurProjectSection(
                   this.parentNode,
                   [
-                        'ourprojects-section',
+                        'ourprojects',
+                        'container-fluid',
+                        'd-flex',
                         'flex-column',
-                        'bg-primary',
                         'position-relative',
+                        'bg-primary',
                         'collapsing',
+                        'z-3'
                   ],
                   'projects',
             );
 
-            this.sectionAbout = new AboutSection(
-                  this.parentNode,
-                  ['bg-secondary', 'gap-9', 'd-flex'],
-                  'aboutus',
-            );
+
 
             this.sectionContact = ContactSection(
                   this.parentNode,
-                  ['container', 'contact-section', 'bg-beige50'],
+                  ['bg-beige50', 'py-9', 'align-self-center', 'px-10'],
                   'contact',
             );
 
             this.footer = new FooterComponent(this.parentNode, 'footer', [
                   'bg-black',
-                  'py-11',
-                  'px-26',
                   'flex-column',
+                  'px-10',
+                  'py-11'
             ]);
       }
 }

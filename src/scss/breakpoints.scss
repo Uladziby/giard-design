@@ -10,41 +10,20 @@
 .container {
       @include make-container();
       max-width: 1920px;
+      min-width: 455px;
+      margin: 0 auto !important;
 }
 
 .header,
 .intro,
-.projects,
 .offers,
 .contact,
+.aboutus,
 .footer {
       @extend .my-row;
 }
 
 @include media-breakpoint-up(md) {
-      .header {
-            &__logo {
-                  @include make-col(1);
-            }
-
-            &__navbar {
-                  @include make-col(1);
-            }
-
-            &__search {
-                  @include make-col(1);
-            }
-      }
-      .intro {
-            &__left-part {
-                  @include make-col(1);
-            }
-
-            &__right-part {
-                  @include make-col(1);
-            }
-      }
-
       .offers {
             &__header {
                   @include make-col(12);
@@ -54,15 +33,371 @@
                   @include make-col(12);
             }
       }
-      .projects {
-      }
+      .aboutus {
+            &__left-part {
+                  @include make-col(12);
+            }
 
-      .contact {
-      }
-
-      .footer {
+            &__right-part {
+                  @include make-col(12);
+            }
       }
 }
 
-@include media-breakpoint-up(lg) {
+.header {
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      @include media-breakpoint-down(md) {
+            &__logo {
+                  justify-content: center;
+                  @include make-col(12);
+            }
+
+            &__navbar {
+                  @include make-col(6);
+            }
+
+            &__search {
+                  @include make-col(6);
+            }
+      }
+
+      @include media-breakpoint-between(md, lg) {
+            &__logo {
+                  justify-content: center;
+                  @include make-col(12);
+            }
+
+            &__navbar {
+                  @include make-col(8);
+            }
+
+            &__search {
+                  @include make-col(4);
+            }
+      }
+
+      @include media-breakpoint-between(lg, xl) {
+            &__logo {
+                  @include make-col(7);
+            }
+
+            &__navbar {
+                  @include make-col(3);
+
+                  & > .navbar-nav {
+                        width: 100%;
+                  }
+            }
+
+            &__search {
+                  @include make-col(2);
+            }
+      }
+      @include media-breakpoint-between(xl, xxl) {
+            &__logo {
+                  @include make-col(7);
+            }
+
+            &__navbar {
+                  @include make-col(3);
+
+                  & > .navbar-nav {
+                        width: 100%;
+                  }
+            }
+
+            &__search {
+                  @include make-col(2);
+            }
+      }
+      @include media-breakpoint-up(xxl) {
+            &__logo {
+                  @include make-col(7);
+            }
+
+            &__navbar {
+                  @include make-col(3);
+
+                  & > .navbar-nav {
+                        width: 100%;
+                  }
+            }
+
+            &__search {
+                  @include make-col(2);
+            }
+      }
+}
+
+.intro {
+      @include media-breakpoint-up(sm) {
+            &__left-part {
+                  @include make-col(12);
+            }
+
+            &__right-part {
+                  @include make-col(12);
+            }
+      }
+
+      @include media-breakpoint-between(lg, xl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(6);
+            }
+      }
+
+      @include media-breakpoint-between(xl, xxl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(6);
+            }
+      }
+
+      @include media-breakpoint-between(xxl, xxxl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(6);
+            }
+      }
+
+      @include media-breakpoint-up(xxxl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(6);
+                  &_slider-buttons {
+                        left: 80%;
+                  }
+            }
+      }
+}
+
+.aboutus {
+      @include media-breakpoint-between(md, lg) {
+            &__left-part {
+                  @include make-col(12);
+            }
+
+            &__right-part {
+                  @include make-col(12);
+            }
+      }
+
+      @include media-breakpoint-between(lg, xl) {
+            &__left-part {
+                  @include make-col(5);
+            }
+
+            &__right-part {
+                  @include make-col(6);
+            }
+      }
+
+      @include media-breakpoint-between(xl, xxl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(5);
+            }
+      }
+
+      @include media-breakpoint-between(xxl, xxxl) {
+            &__left-part {
+                  @include make-col(6);
+            }
+
+            &__right-part {
+                  @include make-col(5);
+            }
+      }
+
+      @include media-breakpoint-up(xxxl) {
+            &__left-part {
+                  @include make-col(7);
+            }
+
+            &__right-part {
+                  @include make-col(4);
+            }
+      }
+}
+
+.grid {
+      @include media-breakpoint-down(sm) {
+            & > .grid-item {
+                  width: 100%;
+            }
+
+            & > .grid-sizer {
+                  width: 100%;
+            }
+      }
+
+      @include media-breakpoint-between(sm, md) {
+            & > .grid-item {
+                  width: 47%;
+            }
+            & > .grid-sizer {
+                  width: 48%;
+            }
+      }
+
+      @include media-breakpoint-between(md, xl) {
+            & > .grid-item {
+                  width: 47%;
+            }
+            & > .grid-sizer {
+                  width: 48%;
+            }
+      }
+
+      @include media-breakpoint-between(xl, xxxl) {
+            & > .grid-item {
+                  width: 31.3%;
+            }
+            & > .grid-sizer {
+                  width: 31.3%;
+            }
+      }
+
+      @include media-breakpoint-up(xxxl) {
+            & > .grid-item {
+                  width: 23%;
+            }
+            & > .grid-sizer {
+                  width: 24%;
+            }
+      }
+}
+
+.contact {
+      @include media-breakpoint-down(md) {
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            &__title {
+                  @include make-col(12);
+            }
+            &__follow {
+                  @include make-col(12);
+            }
+      }
+
+      @include media-breakpoint-between(md, lg) {
+            &__title {
+                  @include make-col(12);
+            }
+            &__follow {
+                  @include make-col(12);
+            }
+      }
+      @include media-breakpoint-up(lg) {
+            &__title {
+                  @include make-col(10);
+            }
+            &__follow {
+                  @include make-col(2);
+            }
+      }
+}
+
+.footer {
+      @include media-breakpoint-up(sm) {
+            &__header {
+                  &-logo {
+                        @include make-col(12);
+                  }
+                  &-contact {
+                        @include make-col(12);
+                  }
+            }
+
+            &__links {
+                  @include make-col(12);
+            }
+
+            &__phone {
+                  @include make-col(12);
+            }
+
+            &__bottom {
+                  justify-content: center;
+                  text-align: center;
+            }
+      }
+
+      @include media-breakpoint-down(sm) {
+            &__header {
+                  &-contact {
+                        flex-direction: column;
+                        gap: 2rem;
+                  }
+            }
+
+            &__links {
+                  flex-direction: column;
+            }
+
+            &__phone {
+                  flex-direction: column;
+            }
+
+            &__bottom {
+                  justify-content: center;
+                  text-align: center;
+            }
+      }
+
+      @include media-breakpoint-up(md) {
+            &__header {
+                  &-logo {
+                        @include make-col(6);
+                  }
+                  &-contact {
+                        @include make-col(6);
+                  }
+            }
+
+            &__links {
+                  @include make-col(6);
+            }
+
+            &__phone {
+                  @include make-col(5);
+
+                  & > span {
+                        text-align: end;
+                  }
+            }
+
+            &__bottom {
+                  & span:first-child {
+                        text-align: start;
+                  }
+                  & span:last-child {
+                        display: flex;
+                        justify-content: flex-end;
+                  }
+            }
+
+            &__contacts-block {
+                  flex-direction: row;
+            }
+      }
 }

@@ -1,12 +1,12 @@
-import photo_1 from 'assets/images/photoGallery/photo_1.jpg';
-import photo_2 from 'assets/images/photoGallery/photo_2.jpg';
-import photo_3 from 'assets/images/photoGallery/photo_3.jpg';
-import photo_4 from 'assets/images/photoGallery/photo_4.jpg';
-import photo_5 from 'assets/images/photoGallery/photo_5.jpg';
-import photo_6 from 'assets/images/photoGallery/photo_6.jpg';
-import photo_7 from 'assets/images/photoGallery/photo_7.jpg';
-import photo_8 from 'assets/images/photoGallery/photo_8.jpg';
-import photo_9 from 'assets/images/photoGallery/photo_9.jpg';
+import photo_1 from 'assets/images/photoGallery/Photo_1.webp';
+import photo_2 from 'assets/images/photoGallery/Photo_2.webp';
+import photo_3 from 'assets/images/photoGallery/Photo_3.webp';
+import photo_4 from 'assets/images/photoGallery/Photo_4.webp';
+import photo_5 from 'assets/images/photoGallery/Photo_5.webp';
+import photo_6 from 'assets/images/photoGallery/Photo_6.webp';
+import photo_7 from 'assets/images/photoGallery/Photo_7.webp';
+import photo_8 from 'assets/images/photoGallery/Photo_8.webp';
+import photo_9 from 'assets/images/photoGallery/Photo_9.webp';
 
 export const photoGallery = [
       { path: photo_1, height: 600 },
